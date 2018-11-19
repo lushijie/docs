@@ -20,7 +20,7 @@ Set `coverpage` to **true**, and create a `_coverpage.md`:
 ```markdown
 <!-- _coverpage.md -->
 
-![logo](_media/icon.svg)
+![logo](_images/icon.svg)
 
 # docsify <small>3.5</small>
 
