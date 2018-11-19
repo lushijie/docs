@@ -22,7 +22,7 @@
   <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
-      name: '<img src=/_images/logo.jpeg style="height:4em;"><div style="margin-top:-.65em">study-docs</div>',
+      name: '<img src=_images/logo.jpeg style="height:4em;"><div style="margin-top:-.65em">study-docs</div>',
       repo: 'https://github.com/lushijie/study-docs',
       alias: {
         // '.*?/awesome': 'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
@@ -49,12 +49,13 @@
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
+            console.log(html);
             if (/githubusercontent\.com/.test(vm.route.file)) {
               url = vm.route.file
                 .replace('raw.githubusercontent.com', 'github.com')
                 .replace(/\/master/, '/blob/master')
             } else {
-              url = 'https://github.com/lushijie/study-docs/blob/master/docs/' + vm.route.file
+              url = 'https://github.com/lushijie/docs/blob/master/' + vm.route.file
             }
             var editHtml = '[:memo: Edit Document](' + url + ')\n'
 
