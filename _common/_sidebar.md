@@ -1,6 +1,6 @@
-- Getting started
+- Mod1
 
-  - [Quick start](docs/quickstart.md)
-  - [Cover page](docs/cover.md)
+  - [Quick start](mod1/quickstart.md)
+  - [Cover page](mod1/cover.md)
 
-- [Custom navbar](docs/custom-navbar.md)
+- [Mod2](mod2/custom-navbar.md)
