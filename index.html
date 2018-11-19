@@ -22,7 +22,7 @@
   <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
-      basePath: '/docs/',
+      basePath: '/',
       name: '<img src="/_images/logo.jpeg" style="height:4em;"><div style="margin-top:-.65em">study-docs</div>',
       repo: 'https://github.com/lushijie/docs',
       alias: {
@@ -30,12 +30,11 @@
         // '.*?/changelog': 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
         '.*/_coverpage.md': '/_common/_coverpage.md',
         '.*/_sidebar.md': '/_common/_sidebar.md',
-        '.*/_home.md': '/_common/_home.md',
       },
       routerMode: 'history', // default: 'hash'
       auto2top: true,
       executeScript: true,
-      homepage: '_home.md',
+      homepage: '/_common/_home.md',
       coverpage: '_coverpage.md',
       loadSidebar: '_sidebar.md',
       maxLevel: 4,
