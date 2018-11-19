@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>docsify</title>
-  <link rel="icon" href="_images/favicon.ico">
+  <link rel="icon" href="/_images/favicon.ico">
   <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
@@ -22,14 +22,16 @@
   <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
-      name: '<img src=_images/logo.jpeg style="height:4em;"><div style="margin-top:-.65em">study-docs</div>',
-      repo: 'https://github.com/lushijie/study-docs',
+      basePath: 'https://lushijie.github.io/docs/',
+      name: '<img src="/_images/logo.jpeg" style="height:4em;"><div style="margin-top:-.65em">study-docs</div>',
+      repo: 'https://github.com/lushijie/docs',
       alias: {
         // '.*?/awesome': 'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
         // '.*?/changelog': 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
         '.*/_coverpage.md': '_common/_coverpage.md',
         '.*/_sidebar.md': '_common/_sidebar.md',
       },
+      routerMode: 'history', // default: 'hash'
       auto2top: true,
       executeScript: true,
       coverpage: '_coverpage.md',
@@ -49,7 +51,6 @@
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
-            console.log(html);
             if (/githubusercontent\.com/.test(vm.route.file)) {
               url = vm.route.file
                 .replace('raw.githubusercontent.com', 'github.com')
