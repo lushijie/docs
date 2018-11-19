@@ -22,14 +22,11 @@
   <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
-      basePath: 'https://lushijie.github.io/docs/',
+      basePath: location.href.indexOf('lushijie.github.io') > -1 ? 'docs' : '',
       name: '<img src="./_images/logo.jpeg" style="height:4em;"><div style="margin-top:-.65em">docs</div>',
       repo: 'https://github.com/lushijie/docs',
       alias: {
-        // '.*?/awesome': 'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
-        // '.*?/changelog': 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
-        // '.*/_coverpage.md': '/_common/_coverpage.md',
-        // '.*/_sidebar.md': '/_common/_sidebar.md',
+        '.*/_common/(.*)': '/_common/$1',
       },
       // routerMode: 'history', // default: 'hash'
       auto2top: true,

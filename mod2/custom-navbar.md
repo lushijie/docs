@@ -68,8 +68,7 @@ You can create sub-lists by indenting items that are under a certain parent.
 
 renders as
 
-![Nesting navbar](../_images/nested-navbar.png 'Nesting navbar1')
-![Nesting navbar](/_images/nested-navbar.png 'Nesting navbar2')
+![Nesting navbar1](./assets/nested-navbar.png 'Nesting navbar1')
 
 ## Combining custom navbars with the emoji plugin
 
